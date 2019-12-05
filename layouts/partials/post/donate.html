@@ -12,7 +12,15 @@
                         <p>{{ T "donate_title" }}</p>
                     </div>
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+                        <div role="tabpanel" class="tab-pane fade active in" id="wechatpay">
+                            <div class="donate-payimg">
+                                <img src="{{- $donate.wechatpay.qrcode | absURL }}"
+                                    alt="{{ T "donate_qrcode_alt" }}" title="{{ T "donate_qrcode_title" }}" />
+                                </div>
+                            <p class="text-muted mv">{{ T "donate_tip" }}</p>
+                            <p class="text-grey">{{ T "donate_wechatpay_action_tip" }}</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="alipay">
                             <div class="donate-payimg">
                                 <img src="{{- $donate.alipay.qrcode | absURL }}"
                                     alt="{{ T "donate_qrcode_alt" }}" title="{{ T "donate_qrcode_title" }}" />
@@ -20,25 +28,17 @@
                             <p class="text-muted mv">{{ T "donate_tip" }}</p>
                             <p class="text-grey">{{ T "donate_alipay_action_tip" }}</p>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="wechatpay">
-                            <div class="donate-payimg">
-                                <img src="{{- $donate.wechatpay.qrcode | absURL }}"
-                                    alt="{{ T "donate_qrcode_alt" }}" title="{{ T "donate_qrcode_title" }}" />
-                            </div>
-                            <p class="text-muted mv">{{ T "donate_tip" }}</p>
-                            <p class="text-grey">{{ T "donate_wechatpay_action_tip" }}</p>
-                        </div>
                     </div>
                     <div class="donate-footer">
                         <ul class="nav nav-tabs nav-justified" role="tablist">
                             <li role="presentation" class="active">
-                                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay"
-                                    aria-expanded="true"><i class="icon icon-alipay"></i> {{ T "donate_alipay" }}</a>
-                            </li>
-                            <li role="presentation" class="">
                                 <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab"
                                     aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i>
                                     {{ T "donate_wechatpay" }}</a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay"
+                                    aria-expanded="true"><i class="icon icon-alipay"></i> {{ T "donate_alipay" }}</a>
                             </li>
                         </ul>
                     </div>

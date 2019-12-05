@@ -129,7 +129,7 @@ donate_wechatpay_action_tip:
 donate_alipay:
   other: 支付宝
 donate_wechatpay:
-  other: 微信支付
+  other: 微信赞赏
 
 
 comment:
