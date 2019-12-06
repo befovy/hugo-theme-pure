@@ -29,4 +29,12 @@
   </div>
 </div>
 {{- end }}
+{{- $donate := .Site.Params.donate}}
+{{- with $donate.enable }}
+<!-- Button trigger modal -->
+<button type="button" data-toggle="modal" data-target="#donateModal"
+    class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning">
+    <span>{{ T "donate_button" }}</span>
+</button>
+{{- end }}
 {{- end }}
